@@ -1,0 +1,13 @@
+[
+    {
+        "__class__": "Paciente",
+        "__atributos__": {
+            "apellido": "Ortiz",
+            "nombre": "Lucas",
+            "email": "lucas@gmail.com",
+            "telefono": "(264)7777777",
+            "altura": "1.7",
+            "peso": "90"
+        }
+    }
+]
