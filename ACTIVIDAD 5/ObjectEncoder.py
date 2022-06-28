@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 class ObjectEncoder:
-    __lista: list[Paciente]
+    __lista: list
     __archivo : str
 
     def __init__(self, archivo):
@@ -15,7 +15,7 @@ class ObjectEncoder:
         diccionario = self.leerJSONArchivo()
         for elem in diccionario:
             if '__class__' not in elem:
-                print("No se encuentra el diccionario")
+                raise TypeError('Diccionario no válido')
             else:
                 class_name=elem['__class__']
                 class_=eval(class_name)

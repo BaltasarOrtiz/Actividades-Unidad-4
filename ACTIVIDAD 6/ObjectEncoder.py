@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 class ObjectEncoder:
-    __lista: list[Provincia]
+    __lista: list
     __archivo : str
     
     def __init__(self, archivo):
@@ -24,7 +24,6 @@ class ObjectEncoder:
         return self.__lista
 
         
-            
     def guardarJSONArchivo(self, diccionario):
         with Path(self.__archivo).open("w", encoding="UTF-8") as destino:
             json.dump(diccionario, destino, indent=4)

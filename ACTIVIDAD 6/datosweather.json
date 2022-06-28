@@ -4,11 +4,11 @@
         "__atributos__": {
             "nombre": "San Juan",
             "capital": "San Juan",
-            "cantidadHabitantes": 3,
-            "cantidadDepartamentos": 2,
-            "temperatura": 57.5,
-            "humedad": 90,
-            "sensacionTermica": 100
+            "cantidadHabitantes": 1000000,
+            "cantidadDepartamentos": 23,
+            "temperatura": 19.92,
+            "humedad": 13,
+            "sensacionTermica": 18.31
         }
     },
     {
@@ -16,11 +16,11 @@
         "__atributos__": {
             "nombre": "Mendoza",
             "capital": "Mendoza",
-            "cantidadHabitantes": "1690000",
-            "cantidadDepartamentos": "40",
-            "temperatura": 4.31,
-            "humedad": 85,
-            "sensacionTermica": 4.31
+            "cantidadHabitantes": 1928730,
+            "cantidadDepartamentos": 34,
+            "temperatura": 17.27,
+            "humedad": 16,
+            "sensacionTermica": 15.47
         }
     }
 ]

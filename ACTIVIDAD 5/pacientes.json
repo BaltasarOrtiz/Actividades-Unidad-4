@@ -9,5 +9,16 @@
             "altura": "1.7",
             "peso": "90"
         }
+    },
+    {
+        "__class__": "Paciente",
+        "__atributos__": {
+            "apellido": "Perez",
+            "nombre": "Carlos",
+            "email": "carlos@gmail.com",
+            "telefono": "(264)1234567",
+            "altura": "2",
+            "peso": "90"
+        }
     }
 ]

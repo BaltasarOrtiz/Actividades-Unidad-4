@@ -104,8 +104,10 @@ class UpdatePacienteForm(PacienteForm):
     
     def bind_save(self, callback):
         self.btn_save.config(command=callback)
+    
     def bind_delete(self, callback):
         self.btn_delete.config(command=callback)
+
     def bind_IMC(self, callback):
         self.btn_IMC.config(command=callback)
 
@@ -134,7 +136,7 @@ class PacienteView(tk.Tk):
 
     def modificarpaciente(self, paciente, index):
         self.list.modificar(paciente, index)
-
+    
     def borrarpaciente(self, index):
         self.form.limpiar()
         self.list.borrar(index)

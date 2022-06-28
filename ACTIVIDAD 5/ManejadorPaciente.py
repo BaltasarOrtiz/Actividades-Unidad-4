@@ -67,7 +67,6 @@ class ManejadorPaciente:
     
     
     def modificarPaciente(self):
-        print(self.__pacienteActual[0])
         paciente = self.__paciente[self.__pacienteActual[0]]
         detallesPaciente = self.vista.obtenerDetalles()
         paciente = self.updatePaciente(detallesPaciente)
@@ -83,4 +82,5 @@ class ManejadorPaciente:
         self.grabarDatos()
 
     def calcularIMC(self):
-        return self.__pacienteActual[1].calcularIMC()
+        imc = self.__pacienteActual[1].calcularIMC()
+        self.vista.mostrarIMC(imc)

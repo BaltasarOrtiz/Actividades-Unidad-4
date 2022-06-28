@@ -9,7 +9,7 @@ class Provincia:
     __humedad : float
     __sensacionTermica : float
 
-
+    
     def __init__(self, nombre, capital, cantidadHabitantes, cantidadDepartamentos, temperatura="", humedad="", sensacionTermica=""):
         self.__nombre = self.requerido(nombre, 'Apellido es un valor requerido')
         self.__capital = self.requerido(capital, 'Capital es un valor requerido')
