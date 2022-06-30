@@ -34,25 +34,25 @@ class Calculadora:
 
 
         #BOTONES 
-        self.boton1 = Button(mainframe, text = "1", width = 5, height = 2, command = partial(self.click_boton,1))
-        self.boton2 = Button(mainframe, text = "2", width = 5, height = 2, command =  partial(self.click_boton,2))
-        self.boton3 = Button(mainframe, text = "3", width = 5, height = 2, command =  partial(self.click_boton,3))
-        self.boton4 = Button(mainframe, text = "4", width = 5, height = 2, command =  partial(self.click_boton,4))
-        self.boton5 = Button(mainframe, text = "5", width = 5, height = 2, command =  partial(self.click_boton,5))
-        self.boton6 = Button(mainframe, text = "6", width = 5, height = 2, command =  partial(self.click_boton,6))
-        self.boton7 = Button(mainframe, text = "7", width = 5, height = 2, command =  partial(self.click_boton,7))
-        self.boton8 = Button(mainframe, text = "8", width = 5, height = 2, command =  partial(self.click_boton,8))
-        self.boton9 = Button(mainframe, text = "9", width = 5, height = 2, command =  partial(self.click_boton,9))
-        self.boton0 = Button(mainframe, text = "0", width = 5, height = 2, command =  partial(self.click_boton,0))
+        self.boton1 = Button(mainframe, text = "1", width = 5, height = 2, command = partial(self.ponerEnPANTALLA,1))
+        self.boton2 = Button(mainframe, text = "2", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,2))
+        self.boton3 = Button(mainframe, text = "3", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,3))
+        self.boton4 = Button(mainframe, text = "4", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,4))
+        self.boton5 = Button(mainframe, text = "5", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,5))
+        self.boton6 = Button(mainframe, text = "6", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,6))
+        self.boton7 = Button(mainframe, text = "7", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,7))
+        self.boton8 = Button(mainframe, text = "8", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,8))
+        self.boton9 = Button(mainframe, text = "9", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,9))
+        self.boton0 = Button(mainframe, text = "0", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,0))
 
-        self.boton_borrar = Button(mainframe, text = "CE", width = 5, height = 2, command =  partial(self.borrar))
+        self.boton_borrar = Button(mainframe, text = "CE", width = 5, height = 2, command =  partial(self.borrarPANEL))
 
-        self.boton_div = Button(mainframe, text = "%", width = 5, height = 2, command =   partial(self.click_boton,"%"))
-        self.boton_mult = Button(mainframe, text = "X", width = 5, height = 2, command =   partial(self.click_boton,"*"))
-        self.boton_sum = Button(mainframe, text = "+", width = 5, height = 2, command =   partial(self.click_boton,"+"))
-        self.boton_rets = Button(mainframe, text = "-", width = 5, height = 2, command =   partial(self.click_boton,"-"))
-        self.boton_fraccion = Button(mainframe, text = "/", width = 5, height = 2, command =  partial(self.click_boton,"/"))
-        self.boton_igual = Button(mainframe, text = "=", width = 5, height = 2, command =  partial(self.hacer_operacion))
+        self.boton_div = Button(mainframe, text = "%", width = 5, height = 2, command =   partial(self.ponerEnPANTALLA,"%"))
+        self.boton_mult = Button(mainframe, text = "X", width = 5, height = 2, command =   partial(self.ponerEnPANTALLA,"*"))
+        self.boton_sum = Button(mainframe, text = "+", width = 5, height = 2, command =   partial(self.ponerEnPANTALLA,"+"))
+        self.boton_rets = Button(mainframe, text = "-", width = 5, height = 2, command =   partial(self.ponerEnPANTALLA,"-"))
+        self.boton_fraccion = Button(mainframe, text = "/", width = 5, height = 2, command =  partial(self.ponerEnPANTALLA,"/"))
+        self.boton_igual = Button(mainframe, text = "=", width = 5, height = 2, command =  partial(self.resolverOperacion))
         #---------------------------------------------------------------------------------------------------------------------
         
         #GRID
@@ -101,15 +101,15 @@ class Calculadora:
     #----------------------------------------------------------------------------------------------------------------------
     
     #FUNCIONES PARA CALCULAR OPERACIONES
-    def click_boton(self, valor):
+    def ponerEnPANTALLA(self, valor):
         self.e_texto.insert(self.__pos, valor)
         self.__pos += 1
 
-    def borrar(self):
+    def borrarPANEL(self):
         self.e_texto.delete(0, END)
         self.__pos = 0
 
-    def hacer_operacion(self):
+    def resolverOperacion(self):
         ecuacion = self.e_texto.get()
         try:
             if "/" not in ecuacion:
