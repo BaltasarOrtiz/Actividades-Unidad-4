@@ -42,7 +42,7 @@ class Provincia:
     def getFeelLike(self):
         return self.__sensacionTermica
     
-    #sets 
+    #Sets 
     def setTemperatura(self, temperatura):
         self.__temperatura = temperatura
     

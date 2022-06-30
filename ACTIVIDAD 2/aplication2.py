@@ -18,39 +18,39 @@ class Aplication:
         self.__ventana.resizable(False, False)
         fuente = font.Font(weight="bold")
         
-        #frame principal
+        #Frame Principal
         self.marco = ttk.Frame(self.__ventana, borderwidth=2, relief="raised", padding=(10, 10))
 
-        #labels
+        #Textos
         self.text1 = ttk.Label(self.marco, text="Precio sin IVA", font=fuente, padding=(5, 5))
         #texto de salida de calculo
         self.text4 = ttk.Label(self.marco, text="IVA", font=fuente, padding=(5, 5))
         self.text5 = ttk.Label(self.marco, text="Precio con IVA", font=fuente, padding=(5, 5))
         
-        #variables
+        #Variables
         self.__precio = DoubleVar()
         self.__IVA = StringVar()
         self.__total = StringVar()
 
-        #entrys
+        #Entradas
         self.entry1 = ttk.Entry(self.marco, textvariable=self.__precio)
         self.entry2 = ttk.Entry(self.marco, textvariable=self.__IVA,  width=15)
         self.entry3 = ttk.Entry(self.marco, textvariable=self.__total, width=15)
         self.entry2.config(state=tk.DISABLED)
         self.entry3.config(state=tk.DISABLED)
         
-        #checks
+        #Checks de IVA
         self.__valorCheck = IntVar()
         self.check1 = ttk.Radiobutton(self.marco, text="IVA 21%", value = 0, variable=self.__valorCheck)
         self.check2 = ttk.Radiobutton(self.marco, text="IVA 10.5%", value = 1, variable=self.__valorCheck)
         
         
 
-        #buttons
+        #Botones
         self.boton1 = ttk.Button(self.marco, text="Calcular", command = self.calcular, width=20)
         self.boton2 = ttk.Button(self.marco, text="Salir", command=self.__ventana.destroy)
 
-        #grids
+        #Grids
         self.marco.grid(column=0, row=0, padx=5, pady=5)
         self.text1.grid(column=0, row=0, padx=5, pady=5)
         self.entry1.grid(column=1, row=0, padx=5, pady=5)
@@ -58,20 +58,21 @@ class Aplication:
         self.check1.grid(column=0, row=1, padx=5, pady=5)
         self.check2.grid(column=0, row=2, padx=5, pady=5)
         
-        #grid texto de salida
+        #Grids de textos de Salida
         self.text4.grid(column=0, row=3, padx=5, pady=5)
         self.text5.grid(column=0, row=5, padx=5, pady=5)
         self.entry2.grid(column=1, row=3, padx=10, pady=10)
         self.entry3.grid(column=1, row=5, padx=10, pady=10)
 
-        #grid buttons
+        #Grids de Botones
         self.boton1.grid(column=0, row=6, padx=5, pady=5)
         self.boton2.grid(column=1, row=6, padx=5, pady=5)
 
 
-        #No touch
+        #Importante para que se vea la ventana
         self.__ventana.mainloop()
     
+    #Funcion que calcula el IVA
     def calcular(self):
         self.entry2.config(state=tk.NORMAL)
         self.entry3.config(state=tk.NORMAL)
@@ -89,7 +90,6 @@ class Aplication:
             self.entry2.config(state="readonly")
         self.entry3.insert(0, str(round(self.__total, 2)))
         self.entry3.config(state="readonly")
-        
 
 
 if __name__ == "__main__":

@@ -113,7 +113,9 @@ class Calculadora:
         ecuacion = self.e_texto.get()
         try:
             if "/" not in ecuacion:
-                Operandos = re.split("[+ - % *]", ecuacion)
+                #re(expresion regular) especifica un conjunto de cadenas que coinciden con ella
+                #re. split devuelve una lista formada por cadenas de texto
+                Operandos = re.split("[+ - % *]", ecuacion) 
                 self.__operando1 = int(Operandos[0])
                 self.__operando2 = int(Operandos[1])
                 if '+' in ecuacion:
@@ -132,6 +134,5 @@ class Calculadora:
         self.e_texto.insert(0, str(resultado)) #type: ignore
         self.__pos+= len(str(resultado))    #type: ignore
     #----------------------------------------------------------------------------------------------------------------------
-    
 if __name__ == '__main__':
     calc = Calculadora()

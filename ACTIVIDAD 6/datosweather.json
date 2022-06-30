@@ -2,25 +2,73 @@
     {
         "__class__": "Provincia",
         "__atributos__": {
-            "nombre": "San Juan",
-            "capital": "San Juan",
-            "cantidadHabitantes": 1000000,
-            "cantidadDepartamentos": 23,
-            "temperatura": 19.92,
-            "humedad": 13,
-            "sensacionTermica": 18.31
+            "nombre": "Buenos Aires",
+            "capital": "La plata",
+            "cantidadHabitantes": 12877203,
+            "cantidadDepartamentos": 135,
+            "temperatura": 10.4,
+            "humedad": 71,
+            "sensacionTermica": 9.35
         }
     },
     {
         "__class__": "Provincia",
         "__atributos__": {
-            "nombre": "Mendoza",
-            "capital": "Mendoza",
-            "cantidadHabitantes": 1928730,
-            "cantidadDepartamentos": 34,
-            "temperatura": 17.27,
-            "humedad": 16,
-            "sensacionTermica": 15.47
+            "nombre": "Catamarca",
+            "capital": "San Fernando del Valle de Catamarca",
+            "cantidadHabitantes": 332390,
+            "cantidadDepartamentos": 16,
+            "temperatura": 11.54,
+            "humedad": 58,
+            "sensacionTermica": 10.26
+        }
+    },
+    {
+        "__class__": "Provincia",
+        "__atributos__": {
+            "nombre": "Chaco",
+            "capital": "Resistencia",
+            "cantidadHabitantes": 984446,
+            "cantidadDepartamentos": 25,
+            "temperatura": 33.28,
+            "humedad": 40,
+            "sensacionTermica": 34.23
+        }
+    },
+    {
+        "__class__": "Provincia",
+        "__atributos__": {
+            "nombre": "Corrientes",
+            "capital": "Corrientes",
+            "cantidadHabitantes": 930991,
+            "cantidadDepartamentos": 25,
+            "temperatura": 9.62,
+            "humedad": 99,
+            "sensacionTermica": 8.33
+        }
+    },
+    {
+        "__class__": "Provincia",
+        "__atributos__": {
+            "nombre": "Cordoba",
+            "capital": "Cordoba",
+            "cantidadHabitantes": 3066801,
+            "cantidadDepartamentos": 26,
+            "temperatura": 10.59,
+            "humedad": 56,
+            "sensacionTermica": 9.17
+        }
+    },
+    {
+        "__class__": "Provincia",
+        "__atributos__": {
+            "nombre": "Entre Rios",
+            "capital": "Parana",
+            "cantidadHabitantes": 1158147,
+            "cantidadDepartamentos": 17,
+            "temperatura": 24.45,
+            "humedad": 69,
+            "sensacionTermica": 24.75
         }
     }
 ]

@@ -3,7 +3,7 @@
         "__class__": "Paciente",
         "__atributos__": {
             "apellido": "Ortiz",
-            "nombre": "Lucas",
+            "nombre": "Juan",
             "email": "lucas@gmail.com",
             "telefono": "(264)7777777",
             "altura": "1.7",
@@ -13,12 +13,23 @@
     {
         "__class__": "Paciente",
         "__atributos__": {
-            "apellido": "Perez",
-            "nombre": "Carlos",
-            "email": "carlos@gmail.com",
-            "telefono": "(264)1234567",
-            "altura": "2",
-            "peso": "90"
+            "apellido": "Cortez",
+            "nombre": "Lucia",
+            "email": "luchicortez69@gmail.com",
+            "telefono": "(266)1234567",
+            "altura": "1.7",
+            "peso": "60"
+        }
+    },
+    {
+        "__class__": "Paciente",
+        "__atributos__": {
+            "apellido": "Ochoa",
+            "nombre": "Pedro",
+            "email": "pedro@gmail.com",
+            "telefono": "(266)1234567",
+            "altura": "1.7",
+            "peso": "60"
         }
     }
 ]

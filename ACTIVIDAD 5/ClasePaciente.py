@@ -27,10 +27,10 @@ class Paciente:
         self.__apellido = self.requerido(apellido, "El apellido es requerido")
     
     def setTel(self, telefono):
-        self.__telefono = self.formatoValido(telefono, Paciente.telefonoRegex, 'Telefono no tiene formato correcto')
+        self.__telefono = self.formatoValido(telefono, Paciente.telefonoRegex, 'Telefono no tiene formato correcto - Ejemplo: (xxx)xxxxxxx')
 
     def setEmail(self, email):
-        self.__email = self.formatoValido(email, Paciente.emailRegex,'Email no tiene formato correcto')
+        self.__email = self.formatoValido(email, Paciente.emailRegex,'Email no tiene formato correcto - Ejemplo: example@gmail.com')
     
     def setAltura(self, altura):
         self.__altura = self.requerido(altura, "La altura es requerida")

@@ -15,8 +15,8 @@ class Manejador:
         self.__lista_provs = self.__contr.decodificarDiccionario()
         self.vista = vista
 
-    #obtengo los datos del clima de la api dada el nombre de la provincia
-    def getDatosProv(self, prov_actual):
+    #Obtengo los datos del clima de la api dada el nombre de la provincia
+    def setDatosProv(self, prov_actual):
         try:
             response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?units=metric&q={prov_actual.getNombre()}&appid={API_KEY}')
             data = response.json()
@@ -27,42 +27,41 @@ class Manejador:
             raise ValueError("No se pudo obtener los datos del clima")
         
 
-
+    #Metodo que obtiene la provincia actual (Utilizando una tupla)
     def seleccionarProv(self, index):
         self.__prov_actual = (index,self.__lista_provs[index])
-        self.getDatosProv(self.__prov_actual[1])
+        self.setDatosProv(self.__prov_actual[1])
         self.vista.verProvinciaEnForm(self.__prov_actual[1])
 
 
-    #AGREGAR
+    #Metodo que agrega provincias a la lista
     def agregarProvincia(self):
         nuevaProv = NewProvincia(self.vista).show()
         if nuevaProv:
-            self.getDatosProv(nuevaProv)
+            self.setDatosProv(nuevaProv)
             self.__lista_provs.append(nuevaProv)
             self.vista.agregarProvincia(nuevaProv)
             self.grabarDatos()
     
-    #ELIMINAR
+    #Metodo que elimina una provincia de la lista
     def borrarProvincia(self):
         self.__lista_provs.pop(self.__prov_actual[0])
         self.vista.borrarProvincia(self.__prov_actual[0])
         self.grabarDatos()
 
 
-    
-    #JSON
+    #Metodo que graba los datos en el archivo
     def grabarDatos(self):
         self.__contr.guardarJSONArchivo(self.toJSON())
 
-
+    #Convierte la lista de provincias a una lista de diccionarios
     def toJSON(self):
         lista_aux = []
         for prov in self.__lista_provs:
             lista_aux.append(prov.toJSON())
         return lista_aux
 
-    #INICIA APP
+    #Inicia app
     def start(self):
         for c in self.__lista_provs:
             self.vista.agregarProvincia(c)
